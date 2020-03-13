@@ -18,7 +18,7 @@ from wordcloud import WordCloud, STOPWORDS
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
-text = open(path.join(d, 'alice.txt')).read()
+text = open(path.join(d, 'alice.txt'),encoding="utf-8").read()
 
 # read the mask image
 # taken from
@@ -26,7 +26,7 @@ text = open(path.join(d, 'alice.txt')).read()
 alice_mask = np.array(Image.open(path.join(d, "alice_mask.png")))
 
 stopwords = set(STOPWORDS)
-stopwords.add("said")
+stopwords.update(["said"])
 
 wc = WordCloud(background_color="white", max_words=2000, mask=alice_mask,
                stopwords=stopwords, contour_width=3, contour_color='steelblue')
