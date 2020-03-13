@@ -17,6 +17,8 @@
 word_cloud
 ==========
 
+[DOCUMENTATION](https://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html)
+
 A little word cloud generator in Python. Read more about it on the [blog
 post][blog-post] or the [website][website].
 
